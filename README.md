@@ -6,9 +6,9 @@
 </h3>
 
 <p align="center">
-	<a href="https://github.com/catppuccin/gollum/stargazers"><img src="https://img.shields.io/github/stars/catppuccin/gollum?colorA=363a4f&colorB=b7bdf8&style=for-the-badge"></a>
-	<a href="https://github.com/catppuccin/gollum/issues"><img src="https://img.shields.io/github/issues/catppuccin/gollum?colorA=363a4f&colorB=f5a97f&style=for-the-badge"></a>
-	<a href="https://github.com/catppuccin/gollum/contributors"><img src="https://img.shields.io/github/contributors/catppuccin/gollum?colorA=363a4f&colorB=a6da95&style=for-the-badge"></a>
+	<a href="https://github.com/maddin-m/gollum/stargazers"><img src="https://img.shields.io/github/stars/maddin-m/gollum?colorA=363a4f&colorB=b7bdf8&style=for-the-badge"></a>
+	<a href="https://github.com/maddin-m/gollum/issues"><img src="https://img.shields.io/github/issues/maddin-m/gollum?colorA=363a4f&colorB=f5a97f&style=for-the-badge"></a>
+	<a href="https://github.com/maddin-m/gollum/contributors"><img src="https://img.shields.io/github/contributors/maddin-m/gollum?colorA=363a4f&colorB=a6da95&style=for-the-badge"></a>
 </p>
 
 <p align="center">
