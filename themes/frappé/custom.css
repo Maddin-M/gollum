@@ -1,0 +1,197 @@
+:root {
+  --color-scheme: dark;
+  --color-transparency: 10%;
+  --add-wiki-sidebar-offset: 0; /* 1 = true, 0 = false */
+
+  --primary: #292c3c;
+  --secondary: #303446;
+  --tertiary: #414559;
+  --primary-text: #c6d0f5;
+  --secondary-text: #a5adce;
+
+  --blue: #8caaee;
+  --cyan: #85c1dc;
+  --green: #a6d189;
+  --pink: #f4b8e4;
+  --purple: #ca9ee6;
+  --red: #e78284;
+  --yellow: #e5c890;
+}
+
+/* general */
+:root, [data-color-mode=light][data-light-theme*=light], [data-color-mode=dark][data-dark-theme*=light] { color-scheme: var(--color-scheme) }
+body { background: var(--primary); color: var(--primary-text) }
+.border { border-color: var(--secondary) !important }
+.border-bottom { border-color: var(--secondary) !important }
+a { color: var(--cyan) }
+hr { background: var(--secondary-text) !important }
+
+/* Box classes */
+.Box { background: var(--secondary); border: 1px solid var(--tertiary) }
+.Box .border-top { border-color: var(--tertiary) !important }
+.Box-row { border-color: var(--tertiary) !important }
+.Box-row--hover-gray:hover { background: var(--tertiary) }
+.Box-row--gray { background: var(--tertiary); border-color: var(--secondary-text) }
+.Box-header { background: var(--tertiary); border-color: var(--secondary) }
+
+/* page edit */
+.tabnav { border-color: var(--secondary) !important }
+.tabnav-tab { color: var(--secondary-text) !important }
+.tabnav-tab.selected { color: var(--primary-text) !important; background: var(--primary) !important; border-color: var(--secondary) !important }
+
+/* dialog */
+#gollum-dialog-dialog-inner { background: var(--secondary) }
+#gollum-dialog-dialog-title .border-bottom { border-color: var(--tertiary) !important }
+#gollum-dialog-dialog-body input:focus { box-shadow: none }
+label { color: var(--primary-text) !important }
+.field .context { color: var(--secondary-text) !important }
+.color-fg-subtle { color: var(--secondary-text) !important }
+
+/* table */
+table, table td, table th { border-color: var(--tertiary) !important }
+table tr { background: var(--secondary) !important }
+table th { color: var(--primary-text) !important }
+
+/* history */
+.color-bg-open { background: color-mix(in srgb, var(--green) var(--color-transparency), transparent) !important }
+.color-bg-closed { background: color-mix(in srgb, var(--red) var(--color-transparency), transparent) !important }
+
+/* search */
+.form-control { background: var(--secondary); color: var(--primary-text); border-color: var(--tertiary); box-shadow: none }
+.form-control:focus-visible { border-color: var(--cyan); box-shadow: inset 0 0 0 1px var(--cyan) }
+.color-bg-success { background: var(--green) !important; color: var(--primary) !important }
+#search-query::placeholder { color: var(--secondary-text) }
+.Counter--primary { background: var(--secondary); color: var(--primary-text) }
+
+/* buttons */
+.btn:hover { filter: brightness(1.1); }
+.btn:not(.btn-primary) { background: var(--secondary); color: var(--primary-text); box-shadow: none; border-color: var(--tertiary) }
+.btn-primary { background: var(--green); color: var(--primary) }
+.btn-link { color: var(--cyan) }
+.next_page, .previous_page { color: var(--cyan) !important }
+.next_page.disabled, .previous_page.disabled { color: var(--secondary-text) !important }
+
+/* wiki content */
+div.toc-title { color: var(--primary-text) !important; border-bottom: 1px solid var(--tertiary) !important }
+.toc { background: var(--secondary) !important; border: 1px solid var(--tertiary) !important }
+#sidebar-content .toc { border: none !important }
+#sidebar-content { padding: 0px !important }
+#wiki-sidebar { border-radius: 3px }
+#wiki-sidebar { margin-top: calc(var(--add-wiki-sidebar-offset) * 31px); }
+:is(h1, h2, h3, h4, h5, h6).editable { border-bottom: 1px solid var(--tertiary) !important }
+blockquote { border-left: .25em solid var(--tertiary) !important; color: var(--secondary-text) !important }
+.markdown-body a::before { filter: brightness(0) saturate(100%) invert(93%) sepia(6%) saturate(201%) hue-rotate(183deg) brightness(98%) contrast(96%) }
+.footnotes { border-top: 1px solid var(--tertiary) !important; color: var(--secondary-text) !important }
+
+/* edit */
+#gollum-autorecover-msg { background: var(--green); color: var(--primary-text); border-color: var(--tertiary) }
+.SelectMenu-modal { background: var(--tertiary) }
+.SelectMenu-header { border-color: var(--secondary) }
+.SelectMenu-item { background: var(--tertiary); color: var(--primary-text); border-color: var(--secondary) }
+.SelectMenu-item:disabled { color: var(--secondary-text) }
+.SelectMenu-item:hover { background: var(--secondary) }
+.SelectMenu-item[aria-checked="true"] { color: var(--primary-text) }
+.SelectMenu-modal { border-color: var(--secondary) }
+.SelectMenu-divider { background: var(--secondary); color: var(--secondary-text); border-color: var(--secondary) }
+#gollum-editor-help.border { border-color: var(--tertiary) !important }
+#gollum-editor-help nav { border-color: var(--secondary) !important }
+#gollum-editor-help-parent, #gollum-editor-help-list { background: var(--tertiary) }
+#gollum-editor-help-parent a, #gollum-editor-help-list a {color: var(--secondary-text) !important; box-shadow: none !important; text-shadow: none !important; border: none !important }
+#gollum-editor-help-parent a:hover, #gollum-editor-help-list a:hover {background: var(--secondary) !important }
+#gollum-editor-help-parent a.selected, #gollum-editor-help-list a.selected { background: var(--secondary) !important; color: var(--primary-text) !important }
+#gollum-editor-help-wrapper { background: var(--tertiary) }
+
+/* github-style alerts */
+.github-alert { border-radius: 0 3px 3px 0; padding-top: 5px !important; padding-bottom: 10px !important }
+.github-alert-note { border-left: .25em solid var(--blue) !important; background: color-mix(in srgb, var(--blue) var(--color-transparency), transparent) }
+.github-alert-note .github-alert-title { color: var(--blue) }
+.github-alert-tip { border-left: .25em solid var(--green) !important; background: color-mix(in srgb, var(--green) var(--color-transparency), transparent) }
+.github-alert-tip .github-alert-title { color: var(--green) }
+.github-alert-important { border-left: .25em solid var(--purple) !important; background: color-mix(in srgb, var(--purple) var(--color-transparency), transparent) }
+.github-alert-important .github-alert-title { color: var(--purple) }
+.github-alert-warning { border-left: .25em solid var(--yellow) !important; background: color-mix(in srgb, var(--yellow) var(--color-transparency), transparent) }
+.github-alert-warning .github-alert-title { color: var(--yellow) }
+.github-alert-caution { border-left: .25em solid var(--red) !important; background: color-mix(in srgb, var(--red) var(--color-transparency), transparent) }
+.github-alert-caution .github-alert-title { color: var(--red) }
+
+/* code blocks */
+.markdown-body pre { min-height: 2rem }
+.hll, .highlight { background: var(--secondary) !important; border: 1px solid var(--tertiary) !important }
+.bp, .highlight .bp { color: var(--cyan) }
+.c, .highlight .c	{ color: var(--secondary-text) }
+.ch, .highlight .ch	{ color: var(--secondary-text) }
+.cm, .highlight .cm	{ color: var(--secondary-text) }
+.cp, .highlight .cp	{ color: var(--secondary-text) }
+.cpf, .highlight .cpf	{ color: var(--secondary-text) }
+.cs, .highlight .cs	{ color: var(--red); font-weight: bold }
+.c1, .highlight .c1	{ color: var(--secondary-text) }
+.dl, .highlight .dl	{ color: var(--yellow) }
+.err, .highlight .err	{ color: var(--primary-text); background: var(--red) }
+.esc, .highlight .esc	{ color: var(--primary-text) }
+.fm, .highlight .fm	{ color: var(--primary-text) }
+.g, .highlight .g	{ color: var(--primary-text) }
+.gc, .highlight .gc	{ background: var(--tertiary) }
+.gd, .highlight .gd	{ background: color-mix(in srgb, var(--red) var(--color-transparency), transparent); color: var(--red) }
+.ge, .highlight .ge	{ color: var(--primary-text); font-style: italic }
+.gg, .highlight .gg	{ color: var(--secondary-text) }
+.gh, .highlight .gh	{ color: var(--secondary-text); font-weight: bold }
+.gi, .highlight .gi	{ background: color-mix(in srgb, var(--green) var(--color-transparency), transparent); color: var(--green) }
+.go, .highlight .go	{ color: var(--secondary-text) }
+.gp, .highlight .gp	{ color: var(--secondary-text); font-weight: bold }
+.gr, .highlight .gr	{ color: var(--red) }
+.gs, .highlight .gs	{ color: var(--primary-text); font-weight: bold }
+.gt, .highlight .gt	{ color: var(--red) }
+.gu, .highlight .gu	{ color: var(--purple); font-weight: bold }
+.il, .highlight .il	{ color: var(--cyan) }
+.k, .highlight .k	{ color: var(--cyan) }
+.kc, .highlight .kc	{ color: var(--cyan) }
+.kd, .highlight .kd	{ color: var(--green) }
+.kn, .highlight .kn	{ color: var(--pink) }
+.kp, .highlight .kp	{ color: var(--green) }
+.kr, .highlight .kr	{ color: var(--green) }
+.kt, .highlight .kt	{ color: var(--green) }
+.l, .highlight .l	{ color: var(--primary-text) }
+.ld, .highlight .ld	{ color: var(--primary-text) }
+.m, .highlight .m	{ color: var(--cyan) }
+.mb, .highlight .mb	{ color: var(--purple) }
+.mf, .highlight .mf	{ color: var(--purple) }
+.mh, .highlight .mh	{ color: var(--purple) }
+.mi, .highlight .mi	{ color: var(--blue) }
+.mo, .highlight .mo	{ color: var(--purple) }
+.n, .highlight .n	{ color: var(--primary-text) }
+.na, .highlight .na	{ color: var(--cyan) }
+.nb, .highlight .nb	{ color: var(--cyan) }
+.nc, .highlight .nc	{ color: var(--purple) }
+.nd, .highlight .nd	{ color: var(--primary-text) }
+.ne, .highlight .ne	{ color: var(--yellow); font-weight: bold }
+.nf, .highlight .nf	{ color: var(--primary-text) }
+.ni, .highlight .ni	{ color: var(--primary-text) }
+.nl, .highlight .nl	{ color: var(--primary-text) }
+.nn, .highlight .nn	{ color: var(--secondary-text) }
+.no, .highlight .no	{ color: var(--primary-text) }
+.nt, .highlight .nt	{ color: var(--blue) }
+.nv, .highlight .nv	{ color: var(--purple) }
+.nx, .highlight .nx	{ color: var(--primary-text) }
+.py, .highlight .py	{ color: var(--primary-text) }
+.o, .highlight .o	{ color: var(--pink) }
+.ow, .highlight .ow	{ color: var(--green) }
+.p, .highlight .p	{ color: var(--primary-text) }
+.s, .highlight .s	{ color: var(--yellow) }
+.sa, .highlight .sa	{ color: var(--yellow) }
+.sb, .highlight .sb	{ color: var(--yellow) }
+.sc, .highlight .sc	{ color: var(--yellow) }
+.sd, .highlight .sd	{ color: var(--yellow) }
+.se, .highlight .se	{ color: var(--yellow) }
+.sh, .highlight .sh	{ color: var(--yellow) }
+.si, .highlight .si	{ color: var(--yellow) }
+.sr, .highlight .sr	{ color: var(--yellow) }
+.ss, .highlight .ss	{ color: var(--yellow) }
+.sx, .highlight .sx	{ color: var(--yellow) }
+.s1, .highlight .s1	{ color: var(--yellow) }
+.s2, .highlight .s2	{ color: var(--yellow) }
+.vc, .highlight .vc	{ color: var(--purple) }
+.vg, .highlight .vg	{ color: var(--purple) }
+.vi, .highlight .vi	{ color: var(--purple) }
+.vm, .highlight .vm	{ color: var(--purple) }
+.w, .highlight .w	{ color: var(--primary-text) }
+.x, .highlight .x	{ color: var(--primary-text) }
